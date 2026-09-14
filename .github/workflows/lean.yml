@@ -1,0 +1,25 @@
+name: Lean build
+
+on:
+  push:
+    branches: [main]
+    paths: ["formal/**", ".github/workflows/lean.yml"]
+  pull_request:
+    paths: ["formal/**", ".github/workflows/lean.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Deep Bellman Hedging formalisation
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          use-mathlib-cache: true

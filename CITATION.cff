@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this implementation, study or formalisation, please cite it as below."
+title: "Deep Bellman Hedging: implementation, empirical study and Lean 4 formalisation"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Andy
+    email: zianwang123@gmail.com
+date-released: "2026-09-13"
+version: "2026.09"
+repository-code: "https://github.com/spirituslab/deep-bellman-hedging"
+license: MIT
+keywords:
+  - deep hedging
+  - reinforcement learning
+  - monetary utility
+  - dynamic programming
+  - Lean 4
+  - mathlib
+references:
+  - type: article
+    title: "Deep Bellman Hedging"
+    authors:
+      - family-names: Buehler
+        given-names: Hans
+      - family-names: Murray
+        given-names: Phillip
+      - family-names: Wood
+        given-names: Ben
+    year: 2022
+    url: "https://arxiv.org/abs/2207.00932"
+  - type: software
+    title: "hedging-gym"
+    authors:
+      - name: "0xC000005"
+    url: "https://github.com/0xC000005/hedging-gym"
